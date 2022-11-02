@@ -1,0 +1,39 @@
+league_oauth2_server:
+    authorization_server:
+        private_key: '%kernel.project_dir%/config/certs/private.key'
+        private_key_passphrase: null
+        encryption_key: '%env(string:OAUTH2_ENCRYPTION_KEY)%'
+        access_token_ttl: PT1H
+        refresh_token_ttl: P1M
+        auth_code_ttl: PT10M
+
+        # Whether to enable the client credentials grant
+        enable_client_credentials_grant: true
+
+        # Whether to enable the password grant
+        enable_password_grant: true
+
+        # Whether to enable the refresh token grant
+        enable_refresh_token_grant: true
+
+        # Whether to enable the authorization code grant
+        enable_auth_code_grant: true
+
+        # Whether to require code challenge for public clients for the auth code grant
+        require_code_challenge_for_public_clients: true
+
+
+    resource_server:
+        public_key: '%kernel.project_dir%/config/certs/public.key'
+
+    scopes:
+        available: [admin, user]
+        default: [admin, user]
+
+    persistence:
+        doctrine:
+            entity_manager: default
+
+    client:
+        # Set a custom client class. Must be a League\Bundle\OAuth2ServerBundle\Model\Client
+        classname:        League\Bundle\OAuth2ServerBundle\Model\Client

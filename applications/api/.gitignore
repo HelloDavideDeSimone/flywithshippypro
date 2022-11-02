@@ -1,0 +1,45 @@
+# OS
+.DS_Store
+
+# IDE
+.idea/
+.vscode/
+
+###> symfony/framework-bundle ###
+/.env.local
+/.env.local.php
+/.env.*.local
+/config/secrets/prod/prod.decrypt.private.php
+/public/bundles/
+/var/
+/vendor/
+###< symfony/framework-bundle ###
+
+/uploads/*
+!/uploads/.gitignore
+
+# PHPSTAN
+phpstan.neon
+
+# PHP CS FIXER
+.php-cs-fixer.php
+.php-cs-fixer.cache
+
+# PHP UNIT
+.phpunit.result.cache
+phpunit.xml
+
+###> friendsofphp/php-cs-fixer ###
+/.php-cs-fixer.php
+/.php-cs-fixer.cache
+###< friendsofphp/php-cs-fixer ###
+
+###> symfony/phpunit-bridge ###
+.phpunit.result.cache
+/phpunit.xml
+###< symfony/phpunit-bridge ###
+
+###> phpunit/phpunit ###
+/phpunit.xml
+.phpunit.result.cache
+###< phpunit/phpunit ###

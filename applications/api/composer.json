@@ -1,0 +1,122 @@
+{
+    "name": "api/ai",
+    "description": "API",
+    "type": "project",
+    "license": "proprietary",
+    "require": {
+        "php": "^7.4",
+        "ext-ctype": "*",
+        "ext-gd": "*",
+        "ext-iconv": "*",
+        "ext-json": "*",
+        "ext-xsl": "*",
+        "composer/package-versions-deprecated": "1.11.99.4",
+        "doctrine/doctrine-bundle": "^2.5",
+        "doctrine/doctrine-migrations-bundle": "^3.2",
+        "doctrine/orm": "^2.10",
+        "imagine/imagine": "^1.2.4",
+        "nelmio/cors-bundle": "^2.1.1",
+        "nicmart/tree": "^0.4.0",
+        "nyholm/psr7": "^1.4",
+        "ramsey/uuid": "^4.2.1",
+        "ramsey/uuid-doctrine": "^1.7.0",
+        "sensio/framework-extra-bundle": "^5.6.1",
+        "symfony-bundles/json-request-bundle": "^4.0.5",
+        "symfony/console": "5.3.*",
+        "symfony/dotenv": "5.3.*",
+        "symfony/expression-language": "5.3.*",
+        "symfony/flex": "^1.13.4",
+        "symfony/framework-bundle": "5.3.*",
+        "symfony/lock": "5.3.*",
+        "symfony/mailer": "5.3.*",
+        "symfony/messenger": "5.3.*",
+        "symfony/mime": "5.3.*",
+        "symfony/monolog-bundle": "^3.7.0",
+        "symfony/proxy-manager-bridge": "5.3.*",
+        "symfony/security-bundle": "5.3.*",
+        "symfony/twig-bundle": "5.3.*",
+        "symfony/yaml": "5.3.*",
+        "twig/cssinliner-extra": "^3.3.0",
+        "twig/inky-extra": "^3.3.0"
+    },
+    "require-dev": {
+        "doctrine/doctrine-fixtures-bundle": "^3.4.0",
+        "fakerphp/faker": "^1.15.0",
+        "friendsofphp/php-cs-fixer": "^3.0.2",
+        "php-parallel-lint/php-console-highlighter": "^0.5",
+        "php-parallel-lint/php-parallel-lint": "^1.3.0",
+        "phpstan/phpstan": "^0.12.94",
+        "phpstan/phpstan-deprecation-rules": "^0.12.6",
+        "phpstan/phpstan-doctrine": "^0.12.42",
+        "phpstan/phpstan-strict-rules": "^0.12.10",
+        "phpstan/phpstan-symfony": "^0.12.41",
+        "phpunit/phpunit": "^9.5.8",
+        "roave/security-advisories": "dev-master",
+        "symfony/browser-kit": "^5.3",
+        "symfony/css-selector": "^5.3",
+        "symfony/phpunit-bridge": "^6.0",
+        "symfony/stopwatch": "^5.3",
+        "symfony/web-profiler-bundle": "^5.3",
+        "thecodingmachine/phpstan-strict-rules": "^0.12.1"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": {
+            "*": "dist"
+        },
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/",
+            "DoctrineMigrations\\": "migrations/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "App\\Tests\\": "tests/"
+        }
+    },
+    "replace": {
+        "paragonie/random_compat": "2.*",
+        "symfony/polyfill-ctype": "*",
+        "symfony/polyfill-iconv": "*",
+        "symfony/polyfill-php74": "*",
+        "symfony/polyfill-php73": "*",
+        "symfony/polyfill-php72": "*",
+        "symfony/polyfill-php71": "*",
+        "symfony/polyfill-php70": "*",
+        "symfony/polyfill-php56": "*"
+    },
+    "scripts": {
+        "auto-scripts": {
+            "cache:clear": "symfony-cmd",
+            "assets:install %PUBLIC_DIR%": "symfony-cmd"
+        },
+        "post-install-cmd": [
+            "@auto-scripts"
+        ],
+        "post-update-cmd": [
+            "@auto-scripts"
+        ],
+        "phpstan": "@phpstan8",
+        "phpstan1": "phpstan analyze --no-progress --level 1 -- src",
+        "phpstan2": "phpstan analyze --no-progress --level 2 -- src",
+        "phpstan3": "phpstan analyze --no-progress --level 3 -- src",
+        "phpstan4": "phpstan analyze --no-progress --level 4 -- src",
+        "phpstan5": "phpstan analyze --no-progress --level 5 -- src",
+        "phpstan6": "phpstan analyze --no-progress --level 6 -- src",
+        "phpstan7": "phpstan analyze --no-progress --level 7 -- src",
+        "phpstan8": "phpstan analyze --no-progress --level 8 -- src",
+        "fix": "php-cs-fixer fix --allow-risky=yes --diff"
+    },
+    "conflict": {
+        "symfony/symfony": "*"
+    },
+    "extra": {
+        "symfony": {
+            "allow-contrib": false,
+            "require": "5.3.*"
+        }
+    }
+}

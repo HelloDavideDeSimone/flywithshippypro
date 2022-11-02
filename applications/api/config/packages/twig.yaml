@@ -1,0 +1,4 @@
+twig:
+    default_path: '%kernel.project_dir%/templates'
+    globals:
+        frontend_baseurl: '%env(resolve:APP_BASEURL_FRONTEND)%'
