@@ -1,0 +1,21 @@
+html {
+    background-color: $background-color;
+    overflow: visible;
+}
+
+.main-container{
+    width: 100% !important;
+    height: 100% !important;
+    //padding-bottom: 80px;
+    background-color: $background-color;
+    overflow: visible !important;
+  }
+
+// sidebar
+.b-sidebar{
+    max-width: 250px !important;
+}
+
+.dashboard-module {
+    height: 300px;
+  }

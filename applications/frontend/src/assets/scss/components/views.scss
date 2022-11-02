@@ -1,0 +1,30 @@
+    .content {
+        position: relative;
+        top: 60px;
+        margin: auto;
+        width: fit-content;
+    }
+  
+    .child-container {
+        padding-left: 255px;
+        height: 100%;
+        width: 100%;
+    }
+
+    @media (max-width: 1099px) {
+        .child-container {
+            padding-left: 0;
+        }
+        .content {
+            top: 0;
+            transform: translateY(0);
+        }
+    }
+
+    .blur-content {
+        filter: blur(7px);
+        cursor: not-allowed;
+        pointer-events: none;
+    }
+  
+  

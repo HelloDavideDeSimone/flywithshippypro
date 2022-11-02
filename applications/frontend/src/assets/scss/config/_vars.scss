@@ -1,0 +1,37 @@
+// root
+$primary: #24A9E1;
+$light-primary: #6ed0fa;
+$danger: #FF6760;
+$success: #72C171;
+$border-radius: 8px;
+$body-color: #52575C;
+$background-color: #F5F5FC;
+
+//input
+$btn-font-weight: bold;
+$input-btn-line-height: 1.6;
+$form-check-input-border-radius: 8px;
+$form-check-input-checked-bg-image:  none;
+$form-check-padding-start: 30px;
+
+//modal
+$modal-header-border-color: transparent;
+$modal-content-border-color: transparent;
+$modal-content-border-radius: 8px;
+$modal-backdrop-bg: #41415C;
+$modal-md: 448px;
+
+//table
+$table-group-separator-color: #E8E8E8;
+$table-border-color: #E8E8E8;
+$table-cell-vertical-align: middle;
+
+// Form checkbox
+$form-check-input-width: 20px;
+$form-check-input-border-radius: 8px;
+$form-check-input-border: solid 1px #DBDDE0;
+
+* {
+    font-family: "Lato", sans-serif;
+}
+

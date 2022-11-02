@@ -1,0 +1,103 @@
+.custom-file-label{
+    width: 100%;
+    height: 220px;
+    text-align: center;
+    border: 2px dashed rgba(82, 87, 92, 0.45);
+    border-radius: 8px;
+    color: $body-color;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    pointer-events: none !important;
+    &:hover{
+        border-color: rgba($primary, 0.45);
+    }
+}
+  
+.custom-file-input{
+    visibility: hidden;
+}
+
+.placeholder-area{
+    opacity: 0.45;
+    pointer-events: all !important;
+    cursor: pointer;
+    padding: 25px 0;
+    & > * {
+        color: inherit !important;
+    }
+    &:hover{
+            color: $primary;
+    }
+}
+.imported-file-text{
+    color: #52575C;
+    & h6{
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 25px;
+        letter-spacing: 0.1px;
+        margin: 0;
+    }
+    & p{
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 20px;
+        letter-spacing: 0.1px;
+        opacity: 0.5;
+    }
+}
+
+.dropping-file {
+    background-color: $light-primary;
+    background: linear-gradient($light-primary, $primary);
+    padding: 90px 0;
+    opacity: 0.5;
+    border-radius: 8px;
+    height: 216px;
+    color: black;
+  }
+.progress-bar {
+    width: 383px;
+    height: 71px;
+    background-color: rgba($success, 0.3);
+    position: static;
+    margin: 25px 15px 0 15px;
+    border-radius: 8px;
+
+    @if ( width == 380px ) {
+        background-color: $success;
+    }
+}
+.file-imported {
+    & g{
+        pointer-events: all !important;
+    }
+    padding: 9px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    text-align: left;
+    //background-color: rgba(192, 192, 218, 0.247);
+    border-radius: 8px;
+    position: absolute;
+    width: 380px;
+    height: 71px;
+    top: 25px;
+    left: 15px;
+}
+
+@media (max-width: 448px)  {
+    .file-imported{
+        padding: 8px;
+        text-align: center;
+        top: 0;
+        height: 100%;
+        flex-direction: column-reverse;
+        left: 0;
+        width: 100%;
+        overflow: visible;
+        z-index: 100;
+    }
+}

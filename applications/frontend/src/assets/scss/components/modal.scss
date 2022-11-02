@@ -1,0 +1,11 @@
+.modal-header{
+    background-color: $background-color;
+}
+.modal-header-bar{
+    padding: 0 16px 10px; 
+    left: 0; 
+    justify-content: space-between;
+    width: 100%;
+    position: absolute;
+    background-color: $background-color;
+}

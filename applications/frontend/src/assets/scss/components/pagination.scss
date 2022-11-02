@@ -1,0 +1,19 @@
+.pagination-element {
+    & button{
+        border-radius: 50% !important;
+        border-color: white;
+        height: 36px;
+        width: 36px;
+        font-weight: bold;
+        color: #52575C;
+        line-height: 16px;
+    }
+    & span {
+        border-radius: 50% !important;
+        border-color: white !important;
+        color: rgba(#52575C, 0.7) !important;
+    }
+}
+button.page-link {
+    padding: 0 !important;
+}

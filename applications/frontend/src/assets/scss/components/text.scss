@@ -1,0 +1,20 @@
+.danger-text {
+    color: $danger ;
+  }
+.success-text {
+    color: $success ;
+  }
+  
+a {
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 12px;
+    letter-spacing: 0.1px;
+    text-decoration: none;
+}
+
+.text-right {
+  text-align: right;
+}

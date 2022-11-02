@@ -1,0 +1,26 @@
+.vue-slider-dot-disabled {
+    height: 0 !important; 
+    width: 0 !important;
+    visibility: hidden !important;
+}
+
+.score-icon-slider{
+    font-size: 30px;
+}
+
+.vue-slider{
+    height: 48px !important;
+}
+
+.vue-slider-dot{
+    height: 65px !important;
+    width: 12px !important;
+}
+
+.vue-slider-dot-handle {
+    border-radius: 2px !important;
+}
+
+.vue-slider-dot-tooltip-inner{
+    border-color: $body-color !important;
+}

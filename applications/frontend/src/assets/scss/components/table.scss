@@ -1,0 +1,40 @@
+// table
+.table-row {
+    height: 56px;
+}
+.table-disabled {
+    background-color: rgb(233, 233, 233);
+    color: rgb(155, 155, 155);
+}
+.large-table{
+    height: 550px;
+}
+
+.score-icon{
+    font-size: 26px;
+}
+
+.active-user-pill{
+    background-color: rgba($success, $alpha: 1);
+    color: #232927;
+    font-weight: 700;
+    padding: 2px 12px;
+    border-radius: 10px;
+    font-size: 14px;
+    margin-left: 10px;
+    bottom: 3px;
+    position: relative;
+}
+
+.unactive-user-pill{
+    background-color: rgba($danger, $alpha: 1);
+    color: #232927;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 2px 10px;
+    margin-left: 10px;
+    border-radius: 10px;
+}
+.score {
+    width: 45px;
+}

@@ -1,0 +1,21 @@
+.b-calendar-grid-weekdays{
+    text-transform: uppercase;
+    font-size: 13px;
+    line-height: 15px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #ABACEA;
+    border-bottom: none !important;
+  }
+.b-calendar-grid-caption {
+    text-transform: capitalize;
+    font-weight: bold;
+}
+.btn-light{
+    background-color: rgba($primary, 0.46);
+    color: white;
+}
+.b-calendar-header {
+    height: 0 !important;
+    visibility: hidden;
+}
