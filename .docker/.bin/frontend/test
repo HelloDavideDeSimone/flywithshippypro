@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+cd "${DIR}" || exit
+./yarn install --frozen-lockfile
+./yarn run lint --no-fix
+./yarn run test:unit

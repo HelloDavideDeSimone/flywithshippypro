@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+cd "${DIR}" || exit
+./composer validate --no-check-all --strict
+./composer update --no-ansi --no-interaction --no-progress --no-suggest --dry-run roave/security-advisories
+./composer install
+./php vendor/bin/parallel-lint --exclude app --exclude var --exclude vendor --exclude bin .
+./symfony lint:twig templates
+./symfony lint:yaml config
+./symfony security:check
+./symfony doctrine:schema:validate --skip-sync
+./php vendor/bin/php-cs-fixer fix --allow-risky=yes --diff --dry-run
+./php vendor/bin/phpstan analyze --no-progress --level 8 -- src
+./php bin/phpunit
